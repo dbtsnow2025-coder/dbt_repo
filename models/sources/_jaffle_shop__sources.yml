@@ -15,7 +15,17 @@ sources:
     tables:
       - name: tb_customers
         freshness: null
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
       - name: tb_orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
   - name: stripe
     database: db_raw
     schema: sc_stripe
