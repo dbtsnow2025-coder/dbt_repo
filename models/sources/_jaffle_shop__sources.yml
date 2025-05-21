@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: a clone of a Snowflake raw database
     database: db_raw
     schema: sc_jaffle_shop
     freshness: 
@@ -14,13 +15,16 @@ sources:
     loaded_at_field: _etl_loaded_at
     tables:
       - name: tb_customers
+        description: raw customers data
         freshness: null
         columns:
           - name: id
+            description: primary key for customers data
             tests:
               - unique
               - not_null
       - name: tb_orders
+        description: raw orders data
         columns:
           - name: id
             tests:
