@@ -27,6 +27,7 @@ sources:
         description: raw orders data
         columns:
           - name: id
+            description: primary key for orders
             tests:
               - unique
               - not_null
@@ -43,6 +44,10 @@ sources:
     loaded_at_field: _batched_at
     tables: 
       - name: tb_payment
-
-
+        description: payment table
+        columns:
+          - name: id
+            description: primary key for payment table
+          - name: PAYMENTMETHOD
+            description: "{{ doc('payment_method') }}"
         
