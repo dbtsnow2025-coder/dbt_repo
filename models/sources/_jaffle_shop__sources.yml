@@ -7,10 +7,10 @@ sources:
     schema: sc_jaffle_shop
     freshness: 
       error_after:
-        count: 12
+        count: 20
         period: day
       warn_after:
-        count: 6
+        count: 10
         period: day
     loaded_at_field: _etl_loaded_at
     tables:
@@ -36,10 +36,10 @@ sources:
     schema: sc_stripe
     freshness: 
       error_after:
-        count: 12
+        count: 20
         period: day
       warn_after:
-        count: 6
+        count: 10
         period: day
     loaded_at_field: _batched_at
     tables: 
